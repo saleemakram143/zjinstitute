@@ -1,0 +1,299 @@
+@import url(variables.css);
+*{
+  font-family:"Calibri", sans-serif;
+}
+.mainNavbar{
+  /* background-color: #2D3C93!important; */
+}
+.LogoImage{
+  height: 100px;
+  border-radius: 30px;
+}
+.MainBg{
+  /* background-image: url('../public/bgMain.webp'); */
+  background-size: cover;
+  background-position: top left;
+  height: 600px;
+}
+.navbar-nav{
+  float: right;
+}
+.Mobile{
+  display: none;
+}
+.Laptop{
+  display: block;
+}
+.topHead{
+  background-color: rgb(0, 0, 96);
+}
+.topHead a{
+  text-decoration: none;
+}
+.navbar-nav{
+  font-weight: 700;
+}
+@media (max-width: 576px)
+{
+  .navbar-nav{
+    background-color: white;
+    padding: 10px;
+    float: none;
+    margin-top: auto!important;
+    border-radius: 10px;
+  }
+  .Mobile{
+    display: block!important;
+  }
+  .Laptop{
+    display: none!important;
+  }
+}
+.course{
+  background-color: rgb(255, 249, 249);
+}
+.course .imgView{
+  overflow: hidden;
+}
+.course img{
+  border-radius: 10px 10px 0px 0px;
+  transition: 0.5s all;
+}
+
+.course{
+  cursor: pointer;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+}
+
+.course:hover img{
+  transform: scale(1.05); 
+}
+.MainHeading{
+  color: var(--PrimaryColor);
+  font-weight: 700;
+  border-bottom: 4px var(--PrimaryColor) solid;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  padding:5px;
+  text-transform: uppercase;
+}
+
+.MainHeading:after{
+  content: "⯊";
+  position: absolute;
+  left: -1%;
+  bottom:-21px;
+  animation: dotmove 2s linear infinite;
+}
+
+@keyframes dotmove {
+  0%{
+    left:-1%;
+    content: "⯊";
+  }
+  45%{
+    left:calc(100% - 25px);
+    content: "⯊";
+  }
+  46%{
+    content: "⯊";
+  }
+  51%{
+    left:calc(100% - 25px);
+    content: "⯋";
+  }
+  95%{
+    left:-1%;
+    content: "⯋";
+  }
+  96%{
+    content: "⯊";
+  }
+  100%{
+    content: "⯊";
+  }
+}
+.Footer{
+  margin-top: 100px;
+  padding-top: 60px!important;
+  background-color: rgb(74, 74, 74);
+}
+.Footer ul{
+  list-style: none;
+  padding-left: 0px;
+}
+.Footer ul li{
+  padding: 3px;
+}
+.Footer a{
+  text-decoration: none;
+  color:white;
+}
+.Footer a:hover{
+  color: var(--PrimaryColor);
+}
+.Footer .animated a:hover:before{
+  animation: none;
+  background-color: var(--PrimaryColor);
+}
+.Footer .animated a:before{
+  content: "";
+  height: 10px;
+  width: 10px;
+  background-color: rgb(216, 215, 215);
+  display: inline-block;
+  margin-right:10px;
+  animation: listanimated 2s linear infinite;
+}
+@keyframes listanimated {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+.round-0{
+  border-radius: 0px!important;
+}
+.myBtn{
+  border-color: var(--PrimaryColor);
+  color:var(--PrimaryColor);
+  padding:2px 15px;
+}
+.myBtn:hover{
+  background-color: var(--PrimaryColor);
+  background: var(--PrimaryColor);
+}
+.CutStyle:hover .borderCut{
+  display: none;
+}
+.CutStyle{
+  margin: 5px;
+  border:none!important;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--PrimaryColor);
+  color: white;
+}
+.CutStyle:hover{
+  background-color: var(--SecondColor);
+}
+.CutStyle .TopRightCut:after{
+  content:"";
+  display:block;
+  background-color:white;
+  border:2px var(--PrimaryColor) solid;
+  position:absolute;
+  transform:rotate(45deg);
+  top:-12px;
+  right:-12px;
+  height:20px;
+  width:20px;
+}
+.CutStyle .TopLeftCut:after{
+  content:"";
+  display:block;
+  background-color:white;
+  border:2px var(--PrimaryColor) solid;
+  position:absolute;
+  transform:rotate(45deg);
+  top:-12px;
+  left:-12px;
+  height:20px;
+  width:20px;
+}
+.CutStyle .BottomRightCut:after{
+  content:"";
+  display:block;
+  background-color:white;
+  border:2px var(--PrimaryColor) solid;
+  position:absolute;
+  transform:rotate(45deg);
+  bottom:-12px;
+  right:-12px;
+  height:20px;
+  width:20px;
+}
+.CutStyle .BottomLeftCut:after{
+  content:"";
+  display:block;
+  background-color:white;
+  border:2px var(--PrimaryColor) solid;
+  position:absolute;
+  transform:rotate(45deg);
+  bottom:-12px;
+  left:-12px;
+  height:20px;
+  width:20px;
+}
+.crumb{
+  background-color: var(--PrimaryColor);
+  text-align: center;
+  padding: 10px;
+  letter-spacing: 1px;
+}
+.crumb a{
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+.crumb:not(a){
+  font-weight: 700;
+  color:rgb(218, 218, 218);
+}
+.contactList{
+  list-style: none;
+  padding: 0px;
+}
+.contactList li{
+  padding: 10px;
+  background-color: rgb(246, 245, 245);
+  transition: 0.5s all;
+}
+.contactList li:nth-child(2n){
+  background-color: rgb(238, 247, 255);
+}
+.contactList li:first-child{
+  border-radius: 10px 10px 0px 0px;
+}
+.contactList li:last-child{
+  border-radius: 0px 0px 10px 10px;
+}
+.contactList li:hover{
+  background-color: white;
+}
+.contactList a{
+  text-decoration: none;
+  color: var(--PrimaryColor);
+}
+.myIcon{
+  background-color: var(--PrimaryColor);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  color: white;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+}
+.animtedInput{
+  margin-top: 15px;
+  position: relative;
+}
+.animtedInput label{
+  background-color: var(--PrimaryColor);
+  position: absolute;
+  color: white;
+  top:-12px;
+  font-size: 14px;
+  padding:0px 5px;
+  left: 10px;
+  border-radius: 10px 0px 10px 0px;
+  display: none;
+}
+.animtedInput input, .animtedInput button{
+  padding: 7px;
+}
